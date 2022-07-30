@@ -6,5 +6,5 @@ Converting an expression in infix notation into an expression in postfix notatio
 
 ## Note
 - Opecodes must be lower alphabetic characters (a-z).
-- The epression must not have spaces.
+- The expression must not have spaces.
 - Operators must be operators (+, -, *, /) or brackets.
