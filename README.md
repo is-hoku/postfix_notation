@@ -5,6 +5,6 @@ Converting an expression in infix notation into an expression in postfix notatio
 `a+b*c*(d+e)` → `abc*de+*+`
 
 ## Note
-- Opecodes must be lower alphabetic characters (a-z).
+- Operands must be lower alphabetic characters (a-z).
 - The expression must not have spaces.
 - Operators must be operators (+, -, *, /) or brackets.
