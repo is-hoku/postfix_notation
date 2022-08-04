@@ -25,7 +25,7 @@ func (s *Stack) pop() rune {
 		return 0
 	}
 	last := s.data[len(s.data)-1]
-	s.data = append(s.data[:0], s.data[:len(s.data)-1]...)
+	s.data = s.data[:len(s.data)-1]
 	s.size--
 	return last
 }
