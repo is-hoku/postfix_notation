@@ -2,22 +2,19 @@ package cmd
 
 type Stack struct {
 	data []rune
-	size int
 }
 
 func newStack() *Stack {
 	stack := make([]rune, 0)
-	return &Stack{data: stack, size: 0}
+	return &Stack{data: stack}
 }
 
 func (s *Stack) isEmpty() bool {
-	return s.size == 0
+	return len(s.data) == 0
 }
 
 func (s *Stack) push(input rune) {
 	s.data = append(s.data, input)
-	s.size++
-	return
 }
 
 func (s *Stack) pop() rune {
@@ -25,8 +22,7 @@ func (s *Stack) pop() rune {
 		return 0
 	}
 	last := s.data[len(s.data)-1]
-	s.data = append(s.data[:0], s.data[:len(s.data)-1]...)
-	s.size--
+	s.data = s.data[:len(s.data)-1]
 	return last
 }
 
